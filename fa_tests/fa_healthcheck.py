@@ -3,11 +3,15 @@ from seleniumbase import BaseCase
 
 class MyTestClass(BaseCase):
 
-    def test_title(self):
+    def test_home(self):
 	self.open("https://www.fayetteacademy.org")           # Navigate browser to page
 	title = self.get_title()
 	self.assertTrue('Fayette Academy' in title)	
 
+    def test_events(self):
+   	self.open("https://events.fayetteacademy.org")
+	title = self.get_title()
+	self.assertTrue('Fayette Academy Events' in title)
 
         ####
 
